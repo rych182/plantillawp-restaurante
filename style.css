@@ -10,3 +10,7 @@ Licese URI: www.gnu.org/licenses/gp1-2.0.html
 Tags: restaurant, mobile first, responsive, pizza;
 Text Domain: lapizzeria
 */
+
+body{
+	background: red;
+}
