@@ -14,4 +14,15 @@ function lapizzeria_styles(){
 }
 //la funcion wp_enqueue_scripts sirve para comunicarse con Wordpress
 add_action('wp_enqueue_scripts', 'lapizzeria_styles');
+
+//Creación de menus
+function lapizzeria_menus(){
+	register_nav_menus(array(
+		'header-menu' => __('Header Menu', 'lapizzeria'),
+		'header-menu' => __('Social Menu', 'lapizzeria')
+	));
+}
+//init es cuando se inicializa Wordpress
+add_action('init','lapizzeria_menus')
+
 ?>
