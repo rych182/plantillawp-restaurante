@@ -19,7 +19,7 @@ add_action('wp_enqueue_scripts', 'lapizzeria_styles');
 function lapizzeria_menus(){
 	register_nav_menus(array(
 		'header-menu' => __('Header Menu', 'lapizzeria'),
-		'header-menu' => __('Social Menu', 'lapizzeria')
+		'social-menu' => __('Social Menu', 'lapizzeria')
 	));
 }
 //init es cuando se inicializa Wordpress
