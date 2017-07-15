@@ -126,4 +126,70 @@ nav.sociales li a[href*="tumblr.com"]::before{
 	content: '\f174';
 }
 
+/** NAVEGACION PRINCIPAL **/
+nav.menu-sitio{
+	display: none;
+}
+@media only screen and (min-width: 768px){
+	nav.menu-sitio{
+		display: block;/*Hace que se muestre el 
+		menú de 768px en adelante, así no desaparece gracias al
+		display:block*/
+	}	
+}
 
+
+nav.menu-sitio ul {
+	list-style: none;
+	display: table;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+nav.menu-sitio ul li a {
+	text-align: center;
+	padding: 20px 0;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+}
+nav.menu-sitio ul li.current_page_item a{
+	border-bottom: 8px solid #a61206;
+}
+nav.menu-sitio ul li:hover {
+	background-color: #f19f30;
+}
+
+@media only screen and (min-width: 768px){
+	nav.menu-sitio ul li {
+		display: table-cell;/*Para que se vean horizontalmente*/
+		width: 1%;
+	}
+}
+
+/** RESPONSIVE MENU **/
+@media only screen and (max-width: 767px){
+	/*Aplica desde 0px a 767 y se le pone max y 767*/
+	.mobile-menu a{
+		height: 40px;
+		background-color: #a61206;
+		width: 100%;
+		color: white!important;
+		display: block;
+		text-align: center;
+		line-height: 40px;
+		text-decoration: none;
+		text-transform: uppercase;/*Mayusculas*/
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.mobile-menu a{
+		display:none;	
+	}
+	
+}
