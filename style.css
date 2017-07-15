@@ -27,6 +27,7 @@ html {
 /** ENCABEZADO **/
 header.encabezado-sitio {
 	border-bottom: 1px solid #c1c1c1;
+	padding-bottom: 30px;
 }
 div.logo {
 	text-align: center;
@@ -56,13 +57,27 @@ img.logotipo{
 		position: absolute;
 		top: 0;
 		right: 0;
-	}
-
-	div.direccion p{
-		text-align: right;
 	}	
 }
+/* POR SI EL TEXTO DE LA DIRECCIÓN SE PEGA A LOS ICONOS DE REDES SOCIALES
+div.direccion {
+	display: block;
+	clear: both;
+	padding-top:10px;
+}
+*/
 
+div.direccion p{
+	margin: 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+@media only screen and (min-width:768px){
+	div.direccion p{
+		text-align: right;
+	}
+}
 /*** MENU REDES SOCIALES ***/
 
 
@@ -76,6 +91,10 @@ nav.sociales ul {
 	nav.sociales ul {
 		float: right;
 	}
+}
+
+.sr-text{
+	display: none;
 }
 
 nav.sociales ul li {
@@ -94,5 +113,17 @@ nav.sociales ul li a:before{
 	-webkit-font-smoothing antialiased;
 }
 
+nav.sociales li a[href*="facebook.com"]::before{
+	content: '\f09a';
+}
+nav.sociales li a[href*="twitter.com"]::before{
+	content: '\f099';
+}
+nav.sociales li a[href*="youtube.com"]::before{
+	content: '\f16a';
+}
+nav.sociales li a[href*="tumblr.com"]::before{
+	content: '\f174';
+}
 
 
