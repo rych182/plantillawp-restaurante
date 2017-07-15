@@ -12,7 +12,7 @@
 	<div class="contenedor">
 		<div class="logo">
 			<a href="<?php echo esc_url(home_url('/') );?>">
-				<img src="<?php echo get_template_directory_uri();?>/img/logo.svg " alt="">
+				<img src="<?php echo get_template_directory_uri();?>/img/logo.svg " class="logotipo"alt="">
 			</a>
 		</div> <!--Este es el cierre del logo-->
 		<div class="informacion-encabezado">
@@ -20,8 +20,8 @@
 				<?php $args = array(
 					'theme_location' => 'social-menu',
 					'container' => 'nav',
-					'container_class' => 'menu-social',
-					'container_id' => 'menu-social',
+					'container_class' => 'sociales',
+					'container_id' => 'sociales',
 					'link_before' => '<span class="sr-text">',
 					'link_after' => '</span>'
 				); 
