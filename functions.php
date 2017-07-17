@@ -11,7 +11,13 @@ function lapizzeria_styles(){
 	//En pocas palabras "Llama a los estilos"
 	wp_enqueue_style('normalize');
 	wp_enqueue_style('fontawesome');
-	wp_enqueue_style('style'); 
+	wp_enqueue_style('style');
+
+	//Registrar JavaScript
+	//wp_enqueue_script(); TOMA 6 PARAMETROS
+	//1-parametros, 2-ubicacion, 3- array de dependencias, 4-la version, 5- true es para que cargue los archivos js en el footer
+	//Aquí no se pone nada en el array por que de momento es el único script que tenemos
+	wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array() , '1.0.0', true); 
 }
 //la funcion wp_enqueue_scripts sirve para comunicarse con Wordpress
 add_action('wp_enqueue_scripts', 'lapizzeria_styles');
