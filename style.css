@@ -24,6 +24,10 @@ html {
 	margin: 0 auto;
 }
 
+.texto-centrado{
+	text-align: center;
+}
+
 /** ENCABEZADO **/
 header.encabezado-sitio {
 	border-bottom: 1px solid #c1c1c1;
@@ -191,5 +195,53 @@ nav.menu-sitio ul li:hover {
 	.mobile-menu a{
 		display:none;	
 	}
-	
+}
+
+/** Templates Contenido **/
+
+div.hero{
+	background-color: black;
+	height: 450px;
+	text-align: center;
+	margin: 0 auto;
+	display: table;
+	position: relative;
+}
+
+div.hero .contenido-hero {
+	display: table-cell;
+	vertical-align: middle;
+	color: #ffffff;
+	position: relative;
+	width: 100vw;
+}
+
+@media only screen and (min-width: 768px){
+	div.text-hero{
+	width: 80%;
+	margin: 0 auto;
+	}	
+}
+
+@media only screen and (min-width: 992px){
+	div.text-hero{
+	width: 60%;
+	}	
+}
+
+div.principal {
+	padding: 60px;
+	background-color: #ffffff;
+	position: relative;
+}
+
+@media only screen and (min-width: 768px){
+	div.principal{
+		margin-top: -90px;
+	}
+}
+
+.contenido-paginas p {
+	font-size: 18px;
+	line-height: 50px;/*Espacio entre cada renglon*/
 }
