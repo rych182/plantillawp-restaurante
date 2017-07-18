@@ -1,4 +1,14 @@
 <?php
+//funcion para agregar un boton de imagen destacada en la sección de páginas de Wordpress.
+//
+function lapizzeria_setup(){//Esta funcion tiene que hacer hook
+	//add_theme_support('post-thumbnails') así se llama lo que habilita las imagenes destacadas
+	add_theme_support('post-thumbnails');
+}
+//Aquí esta el hook
+//after_setup_theme es una función que correra después que la plantilla ha sido instalada en nuestro Wordpress
+add_action('after_setup_theme', 'lapizzeria_setup');
+
 //Fuentes, tamaño de imagenes, agregar jquery, librerías de css se hace con funtions.php
 
 function lapizzeria_styles(){ 	

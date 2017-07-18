@@ -12,7 +12,7 @@
 	<div class="contenedor">
 		<div class="logo">
 			<a href="<?php echo esc_url(home_url('/') );?>">
-				<img src="<?php echo get_template_directory_uri();?>/img/logo.svg " class="logotipo"alt="">
+				<img src="<?php echo get_template_directory_uri();?>/img/PortadaGPQ.jpg " class="logotipo"alt="">
 			</a>
 		</div> <!--Este es el cierre del logo-->
 		<div class="informacion-encabezado">
