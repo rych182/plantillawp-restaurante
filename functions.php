@@ -36,7 +36,7 @@ function lapizzeria_styles(){
 //la funcion wp_enqueue_scripts sirve para comunicarse con Wordpress
 add_action('wp_enqueue_scripts', 'lapizzeria_styles');
 
-//Creación de menus
+//Creación de menus, aquí podemos crear lo que aparezca en la pestaña de menus
 function lapizzeria_menus(){
 	register_nav_menus(array(
 		'header-menu' => __('Header Menu', 'lapizzeria'),
