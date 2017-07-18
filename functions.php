@@ -17,6 +17,7 @@ function lapizzeria_styles(){
 	wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '7.0');
 	wp_register_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', array('normalize'), '4.7.0');
 	wp_register_style('style', get_template_directory_uri() . '/style.css', array('normalize'), '1.0');
+	wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900',array(),'1,0,0');
 	// la funcion get_template_directory_uri() sirve para que se escriba la url que va en las etiquetas "link"
 	//En pocas palabras "Llama a los estilos"
 	wp_enqueue_style('normalize');
