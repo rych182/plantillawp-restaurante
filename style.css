@@ -200,12 +200,26 @@ nav.menu-sitio ul li:hover {
 /** Templates Contenido **/
 
 div.hero{
-	background-color: black;
+	/*Al usar estos tres background la imagen se ajusta al tamaño del contenedor*/
+	background: no-repeat;
+	background-position: center center;
+	background-size: cover;
 	height: 450px;
 	text-align: center;
 	margin: 0 auto;
 	display: table;
 	position: relative;
+}
+
+div.hero::after{
+	/*El position: absolute es por el position:relative que tenemos arriba*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	content:'';
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
 }
 
 div.hero .contenido-hero {
@@ -214,6 +228,7 @@ div.hero .contenido-hero {
 	color: #ffffff;
 	position: relative;
 	width: 100vw;
+	z-index: 2;
 }
 
 @media only screen and (min-width: 768px){

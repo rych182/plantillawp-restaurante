@@ -8,11 +8,12 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 <!--the_post(): es lo que contiene la información-->
 	<?php while (have_posts()): the_post(); ?>
 
-	<div class="hero">
+
+	<div class="hero" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);">
 		<div class="contenido-hero">
 			<div class="texto-hero">
 				<!--the_title() se encarga de imprimir el titulo de la página-->
-				<?php the_post_thumbnail() ?>
+				
 				<h1><?php the_title() ?>	</h1>				
 			</div>
 		</div>
