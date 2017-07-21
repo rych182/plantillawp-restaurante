@@ -42,6 +42,14 @@ h3{
 h4{
 	font-size: 24px;
 }
+
+.clear,
+.clear::after{ /*Acomoda el contenido de las cajas con el footer*/
+	content: '';
+	clear: both;
+	display: block;
+}
+
 .contenedor {
 	max-width: 1100px;
 	width: 100%;
@@ -325,4 +333,68 @@ footer p{
 
 footer p.copyright{
 	margin-top: 30px;
+}
+
+/** NOSOTROS **/
+
+div.informacion-cajas > div {
+	text-align: center;
+	width: 100%;
+	color: #ffffff;
+}
+
+div.informacion-cajas > div img {
+	width: 100%;
+}
+
+@media only screen and (min-width: 480px) {
+	div.informacion-cajas > div { /*Para que 2 imagenes se vean en el mismo nivel*/
+		width: 50%;
+		float: left;
+	}
+
+	div.informacion-cajas > div:last-child {
+		width: 100%; 
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	div.informacion-cajas > div,
+	div.informacion-cajas > div:last-child {
+		width: 33.3%;
+	}	
+}
+
+div.informacion-cajas > div:nth-child(1){
+	/*Con nth-child[] seleccionamos la caja para
+	ponerle un color*/
+	background-color: #f19f30;
+	}
+
+div.informacion-cajas > div:nth-child(2){
+	/*Con nth-child[] seleccionamos la caja para
+	ponerle un color*/
+	background-color: #127427;
+	}
+
+div.informacion-cajas > div:nth-child(3){
+	/*Con nth-child[] seleccionamos la caja para
+	ponerle un color*/
+	background-color: #a61206;
+	}
+
+div.contenido-caja{
+	padding: 20px 5px 5px 5px;
+}
+
+@media only screen and (min-width: 992px){
+	div.contenido-caja{
+		padding: 50px 0;
+	}
+}
+
+div.contenido-caja h3 {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 24px;
 }

@@ -28,7 +28,7 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 		</main>
 	</div>
 	
-	<div class="informacion-cajas contenedor">
+	<div class="informacion-cajas contenedor clear">
 		<div class="caja"> <!--Caja 1-->
 			<?php
 				$id_imagen = get_field('imagen_1');
