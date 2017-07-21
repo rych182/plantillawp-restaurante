@@ -29,12 +29,42 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 	</div>
 	
 	<div class="informacion-cajas contenedor">
-		<div class="caja">
-			<img src=" <?php the_field('imagen_1'); ?> " alt="">
+		<div class="caja"> <!--Caja 1-->
+			<?php
+				$id_imagen = get_field('imagen_1');
+				$imagen = wp_get_attachment_image_src($id_imagen,'nosotros');
+			?>
+			<img src="<?php echo $imagen[0] ?>" class="imagen-caja">
+		
+
+			<div class="contenido-caja">
+				<?php the_field('descripcion_1'); ?>
+			</div>
 		</div>
 
-		<div class="contenido-caja">
-			<?php the_field('descripcion_1'); ?>
+		<div class="caja"> <!--Caja 2-->
+			<div class="contenido-caja">
+				<?php the_field('descripcion_2'); ?>
+			</div>
+
+			<?php
+				$id_imagen = get_field('imagen_2');
+				$imagen = wp_get_attachment_image_src($id_imagen,'nosotros');
+			?>
+			<img src="<?php echo $imagen[0] ?>" class="imagen-caja">
+		</div>
+
+		<div class="caja"><!--Caja 3-->
+			<?php
+				$id_imagen = get_field('imagen_3');
+				$imagen = wp_get_attachment_image_src($id_imagen,'nosotros');
+			?>
+			<img src="<?php echo $imagen[0] ?>" class="imagen-caja">
+		
+
+			<div class="contenido-caja">
+				<?php the_field('descripcion_3'); ?>
+			</div>
 		</div>
 	</div>
 

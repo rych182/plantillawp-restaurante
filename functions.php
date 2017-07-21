@@ -4,6 +4,9 @@
 function lapizzeria_setup(){//Esta funcion tiene que hacer hook
 	//add_theme_support('post-thumbnails') así se llama lo que habilita las imagenes destacadas
 	add_theme_support('post-thumbnails');
+	//Registra un nuevo tamaño de imagen
+	//add_image_size('nombre',ancho,alto,true) el true es para redimensionar
+	add_image_size('nosotros',437,291,true);
 }
 //Aquí esta el hook
 //after_setup_theme es una función que correra después que la plantilla ha sido instalada en nuestro Wordpress
@@ -37,6 +40,7 @@ function lapizzeria_styles(){
 add_action('wp_enqueue_scripts', 'lapizzeria_styles');
 
 //Creación de menus, aquí podemos crear lo que aparezca en la pestaña de menus
+
 function lapizzeria_menus(){
 	register_nav_menus(array(
 		'header-menu' => __('Header Menu', 'lapizzeria'),
