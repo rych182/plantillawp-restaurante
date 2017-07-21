@@ -32,7 +32,7 @@ h1{
 }
 
 h2{
-	font-size: 	40px;
+	font-size: 	32px;
 }
 
 h3{
@@ -345,6 +345,7 @@ div.informacion-cajas > div {
 
 div.informacion-cajas > div img {
 	width: 100%;
+	display: block;
 }
 
 @media only screen and (min-width: 480px) {
@@ -389,7 +390,7 @@ div.contenido-caja{
 
 @media only screen and (min-width: 992px){
 	div.contenido-caja{
-		padding: 50px 0;
+		padding: 10px 0;
 	}
 }
 
