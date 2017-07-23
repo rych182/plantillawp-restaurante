@@ -7,6 +7,8 @@ function lapizzeria_setup(){//Esta funcion tiene que hacer hook
 	//Registra un nuevo tamaño de imagen
 	//add_image_size('nombre',ancho,alto,true) el true es para redimensionar
 	add_image_size('nosotros',437,291,true);
+
+	add_image_size('especialidades',768,515,true);
 }
 //Aquí esta el hook
 //after_setup_theme es una función que correra después que la plantilla ha sido instalada en nuestro Wordpress
