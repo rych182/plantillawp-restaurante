@@ -48,6 +48,50 @@ function lapizzeria_menus(){
 	));
 }
 //init es cuando se inicializa Wordpress
-add_action('init','lapizzeria_menus')
+add_action('init','lapizzeria_menus');
+
+
+
+//El custom post field sirve para mantener mas ordenado el proyecto
+add_action('init','lapizzeria_especialidades');
+function lapizzeria_especialidades(){ 
+	$labels = array(//Estas son etiquetas de la interfaz
+		'name'			=> _x( 'Servicios', 'lapizzeria'),
+		'singular_name' => _x( 'Servicios', 'post type singular name', 'lapizzeria'),
+		'menu_name'		=> _x( 'Servicios', 'admin menu', 'lapizzeria'),
+		'name_admin_bar'=> _x( 'Servicios', 'add new on admin bar', 'lapizzeria'),
+		'add_new'		=> _x( 'Add New', 'book', 'lapizzeria'),
+		'add_new_item'	=> __( 'Add New Servicio', 'lapizzeria'),
+		'new_item'		=> __( 'New Servicios', 'lapizzeria'),
+		'edit_item'		=> __( 'Edit Servicios', 'lapizzeria'),
+		'view_item'		=> __( 'View Servicios', 'lapizzeria'),
+		'all_items'		=> __( 'All Servicios', 'lapizzeria'),
+		'search_items'	=> __( 'Seach Servicios', 'lapizzeria'),
+		'parent_item_colon'=> __('Parent Servicios:', 'lapizzeria'),
+		'not_found'		=> __('No Servicios found.','lapizzeria'),
+		'not_found_in_trash'=> __('No Servicios found in Trash.','lapizzeria')
+	);
+
+	$args = array(
+		'labels'				=> $labels,
+		'description'			=> __('Description.', 'lapizzeria'),
+		'public'				=> true,
+		'publicity_queryable'	=> true,
+		'show_ui'				=> true,
+		'show_in_menu'			=> true,
+		'query_var'				=> true,
+		'rewrite'				=> array( 'slug' => 'especialidades'),//Este es la url de especialidades
+		'capability_type'		=> 'post',
+		'has_archive'			=> true,
+		'hierarchical'			=> false,
+		'menu_position'			=> 6,
+		'supports'				=> array('title', 'editor', 'thumbnail'),//Queremos que tenga un titulo un editor y una imagen destacada
+		'taxonomies'			=> array('category'),//Darle una categoría
+		);
+
+		register_post_type('especialidades', $args);
+}
+
+
 
 ?>
