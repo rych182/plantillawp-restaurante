@@ -50,6 +50,10 @@ h4{
 	display: block;
 }
 
+.texto-rojo{
+	color: #a61206;
+}
+
 .contenedor {
 	max-width: 1100px;
 	width: 100%;
@@ -398,4 +402,42 @@ div.contenido-caja h3 {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 24px;
+}
+
+/**		SERVICIOS 	**/
+
+.nuestras-especialidades{
+	padding: 0 60px;/*Para que se alinie*/ 
+}
+
+div.texto-especialidad{
+	padding: 20px;
+}
+div.texto-especialidad h4{
+	border-bottom: 1px solid #dfdfdd;
+	padding-bottom: 15px;
+	font-weight: 700;
+	text-transform: uppercase; 
+	margin: 0;
+}
+
+div.texto-especialidad h4 span {
+	float: right;
+	font-size: 30px;
+	color: #f19f30;
+	font-family: 'Open Sans', sans-serif;
+}
+
+div.texto-especialidad p{
+	color: #3d3d3d;
+	line-height: 30px;
+}
+
+/** 	GRID 	**/
+
+@media only screen and (min-width: 768px){
+	.contenedor-grid{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
 }

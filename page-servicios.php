@@ -34,7 +34,7 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 <?php endwhile; ?>
 
 <div class="nuestras-especialidades contenedor">
-	<h3 class="">Servicios</h3>
+	<h3 class="texto-rojo">Servicios</h3>
 	<div class="contenedor-grid">
 	<?php 
 		$args = array(
