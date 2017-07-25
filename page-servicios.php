@@ -49,7 +49,7 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 	
 	?>
 
-	<div class="">
+	<div class="columnas2-4">
 		<!-- "the_post_thumbnail" te imprime imagenes, y al agregarle el campo de especialidades, toma el 
 		tamaño que le indicaste en el archivo de functions.php-->
 		<?php the_post_thumbnail('especialidades'); ?>
@@ -64,6 +64,40 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 
 	<?php endwhile; wp_reset_postdata();
 	//Siempre que utilice WP_Query, debes terminar con wp_reset_postdata();?>		
+	</div> <!--CONTENEDOR GRID 1-->
+
+
+
+	<h3 class="texto-rojo">Otros</h3>
+	<div class="contenedor-grid">
+	<?php 
+		$args = array(
+			'post_type' => 'especialidades',
+			'posts_per_page' => -1, //para que se muestren el numero de servicios que sean 
+			'orderby' => 'title',
+			'order' => 'ASC',
+			'category_name' => 'otros'
+			);
+			$otros = new WP_Query($args);
+			while ($otros ->have_posts()): $otros->the_post();		
+	
+	?>
+
+	<div class="columnas2-4">
+		<!-- "the_post_thumbnail" te imprime imagenes, y al agregarle el campo de especialidades, toma el 
+		tamaño que le indicaste en el archivo de functions.php-->
+		<?php the_post_thumbnail('especialidades'); ?>
+		
+		<div class="texto-especialidad">
+			<!-- "the_title" te imprime el titulo de cada una de las especialidades-->
+			<!-- "the_field" te imprime el campo personalizado que hayas creado en "Custon Fields-->
+			<h4> <?php the_title(); ?> <span> <?php the_field('precio'); ?> </span> </h4>
+			<?php the_content(); //te imprime el contenido de la entrada del servicio  ?>
+		</div>
 	</div>
+
+	<?php endwhile; wp_reset_postdata();
+	//Siempre que utilice WP_Query, debes terminar con wp_reset_postdata();?>		
+	</div> <!--CONTENEDOR GRID 2-->
 </div>
 <?php get_footer(); ?>
