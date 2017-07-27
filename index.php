@@ -38,12 +38,35 @@
 	la funcion 'have_posts():' hace eso. se encarga de revisar cuando el loop a finalizado
 	, cuando ya no hay mas resultados que mostrar y terminará de ejecutar el while-->
 	<!--the_post(): es lo que contiene la información-->
-	<?php while (have_posts()): the_post(); ?>
+				<?php while (have_posts()): the_post(); ?>
 
-	<article class="entrada-blog">
-		<?php the_title(); ?>
-	</article>
-	<?php endwhile; ?>			
+					<article class="entrada-blog">
+						<a href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail('especialidades'); ?>
+						</a>
+						<header class="informacion-entrada clear">
+							<div class="fecha">
+								<time>
+									<?php echo the_time('d'); ?>
+									<span><?php the_time('M');?></span>
+									<div class="titulo-entrada">
+										<h2> <?php the_title(); ?> </h2>
+										<p class="autor">
+											<!--fa y fa-user sirven para poner el icono de admin-->
+											<i class="fa fa-user" aria-hidden="true"> <?php the_author();?> </i>
+										</p>
+									</div>
+								</time>
+							</div>
+							<?php //the_tags(); ?>
+						</header>
+						<div class="contenido-entrada">
+							<?php the_excerpt(); ?>
+							<a href="<?php the_permalink(); ?>" class="button rojo">Leer mas</a>
+
+						</div>
+					</article>
+			<?php endwhile; ?>			
 		</main>
 	</div>
 
