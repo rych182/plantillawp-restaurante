@@ -31,6 +31,7 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 		<?php comment_form(); ?> <!--Función que va a imprimir el formulario de los comentarios-->
 	</div>
 	<div class="contenedor">
+		<h3 class="texto-centrado">Comentarios</h3>
 		<ul class="lista-comentarios">
 			<?php //get_comments nos regresa los comentarios, nos pasa un arreglo con distintos ajustes
 			//requiere 2 parametros, post_id y $post->ID
