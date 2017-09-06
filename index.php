@@ -66,11 +66,16 @@
 							</header>
 							<div class="contenido-entrada">
 								<?php the_excerpt(); ?> <!--Cuando escribes the_excerpt(); o the_content(); lleva por default una etiqueta "p" aunque no se vea-->
-								<a href="<?php the_permalink(); ?>" class="button rojo">Leer mas</a>
+								<a href="<?php the_permalink(); ?>" class="button">Leer mas</a>
 
 							</div>
 						</article>
-				<?php endwhile; ?>			
+				<?php endwhile; ?>		
+				<div class="paginacion">
+					<!--La paginación siempre se pone después del "endwhile"(por lo general)-->
+					<?php echo paginate_links(); ?>	
+				</div>
+				
 			</main>
 
 			<?php get_sidebar(); ?>
