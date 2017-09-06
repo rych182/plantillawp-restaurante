@@ -555,6 +555,11 @@ div.contenido-entrada p{
 	line-height: 24px;/*Para que no se vea el contenido tan separado*/
 }
 
+ul.lista-comentarios,
+ul.lista-comentarios ul {
+	list-style: none;
+}
+
 /*	SIDEBAR  */
 aside.sidebar {
 	margin-top: 3px;
