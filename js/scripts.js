@@ -27,7 +27,7 @@ $(document).ready(function() {
 function ajustarCajas() {
 		var imagenes = $('.imagen-caja');
 
-		if (imagenes.length > 0 ) {
+		if(imagenes.length > 0 ) {
 			var altura = imagenes[0].height;//con height podemos tomar la altura de las imagenes
 			var cajas = $('div.contenido-caja');
 			$(cajas).each(function(i, elemento){//i es el indice

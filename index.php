@@ -29,45 +29,52 @@
 
 
 	<div class="principal contenedor">
-		<main class="texto-centrado contenido-paginas">
-		<!--the_content(); imprime el contenido-->	
-			
-<!--Este es el loop de Wordprees-->
-	<!--Esta es una iteración que este revisando en la base de datos y mientras
-	haya contenido o haya un post estará trayendo el contenido
-	la funcion 'have_posts():' hace eso. se encarga de revisar cuando el loop a finalizado
-	, cuando ya no hay mas resultados que mostrar y terminará de ejecutar el while-->
-	<!--the_post(): es lo que contiene la información-->
-				<?php while (have_posts()): the_post(); ?>
+		<div class="contenedor-grid">
+			<main class="columnas2-3 contenido-paginas">
+			<!--the_content(); imprime el contenido-->	
+				
+					<!--Este es el loop de Wordprees-->
+					<!--Esta es una iteración que este revisando en la base de datos y mientras
+					haya contenido o haya un post estará trayendo el contenido
+					la funcion 'have_posts():' hace eso. se encarga de revisar cuando el loop a finalizado
+					, cuando ya no hay mas resultados que mostrar y terminará de ejecutar el while-->
+					<!--the_post(): es lo que contiene la información-->
+					<?php while (have_posts()): the_post(); ?>
 
-					<article class="entrada-blog">
-						<a href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail('especialidades'); ?>
-						</a>
-						<header class="informacion-entrada clear">
-							<div class="fecha">
-								<time>
-									<?php echo the_time('d'); ?>
-									<span><?php the_time('M');?></span>
-									<div class="titulo-entrada">
-										<h2> <?php the_title(); ?> </h2>
-										<p class="autor">
-											<!--fa y fa-user sirven para poner el icono de admin-->
-											<i class="fa fa-user" aria-hidden="true"> <?php the_author();?> </i>
-										</p>
-									</div>
-								</time>
+						<article class="entrada-blog">
+							<a href="<?php the_permalink(); ?>">
+								<?php the_post_thumbnail('especialidades'); ?>
+							</a>
+							<header class="informacion-entrada clear">
+								<div class="fecha">
+									<time>
+										<?php echo the_time('d'); ?>
+										<span><?php the_time('M');?></span>
+									</time>	
+								</div>
+										<div class="titulo-entrada">
+											<h2> <?php the_title(); ?> </h2>
+											<p class="autor">
+												<!--fa y fa-user sirven para poner el icono de admin-->
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<?php the_author();?>
+											</p>
+										</div>
+									
+								
+								<?php //the_tags();  imprime las etiquetas?>
+							</header>
+							<div class="contenido-entrada">
+								<?php the_excerpt(); ?> <!--Cuando escribes the_excerpt(); o the_content(); lleva por default una etiqueta "p" aunque no se vea-->
+								<a href="<?php the_permalink(); ?>" class="button rojo">Leer mas</a>
+
 							</div>
-							<?php //the_tags(); ?>
-						</header>
-						<div class="contenido-entrada">
-							<?php the_excerpt(); ?>
-							<a href="<?php the_permalink(); ?>" class="button rojo">Leer mas</a>
+						</article>
+				<?php endwhile; ?>			
+			</main>
 
-						</div>
-					</article>
-			<?php endwhile; ?>			
-		</main>
-	</div>
+			<?php get_sidebar(); ?>
+		</div> <!--CONTENEDOR GRID-->
+	</div> <!--Principal-->
 
 <?php get_footer(); ?>

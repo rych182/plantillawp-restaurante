@@ -94,6 +94,21 @@ function lapizzeria_especialidades(){
 		register_post_type('especialidades', $args);
 }
 
+//WIDGETS
 
+function lapizzeria_widgets(){
+	register_sidebar( array(
+	'name'	 =>		'Blog sidebar',//titulo en el backoffice de apariencia>widgets
+	'id'	 =>		'blog_sidebar',
+	'before_widget'	 =>		'<div class="widget">',
+	'after_tittle'	 =>		'</div>',	
+	'before_tittle'	 =>		'<h3>',//El titulo de Buscar
+	'after_tittle'	 =>		'</h3>',
+
+
+	));
+}
+//Hacemos hook
+add_action('widgets_init','lapizzeria_widgets');
 
 ?>
