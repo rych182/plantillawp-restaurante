@@ -23,20 +23,24 @@ function lapizzeria_styles(){
 	wp_register_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', array('normalize'), '4.7.0');
 	wp_register_style('style', get_template_directory_uri() . '/style.css', array('normalize'), '1.0');
 	wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900',array(),'1,0,0');
+	wp_register_style('fluidboxcss', get_template_directory_uri() . '/css/fluidbox.min.css', array('normalize'), '1.0');
 	// la funcion get_template_directory_uri() sirve para que se escriba la url que va en las etiquetas "link"
 	//En pocas palabras "Llama a los estilos"
 	wp_enqueue_style('normalize');
 	wp_enqueue_style('fontawesome');
 	wp_enqueue_style('style');
+	wp_enqueue_style('fluidboxcss');
 
 	//Registrar JavaScript
 	//wp_enqueue_script(); TOMA 6 PARAMETROS
 	//1-parametros, 2-ubicacion, 3- array de dependencias, 4-la version, 5- true es para que cargue los archivos js en el footer
 	//Aquí no se pone nada en el array por que de momento es el único script que tenemos
 	wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array() , '1.0.0', true); 
+	wp_register_script('fluidboxjs', get_template_directory_uri() . '/js/jquery.fluidbox.min.js', array() , '1.0.0', true);
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('scripts');
+	wp_enqueue_script('fluidboxjs');
 }
 //la funcion wp_enqueue_scripts sirve para comunicarse con Wordpress
 add_action('wp_enqueue_scripts', 'lapizzeria_styles');
