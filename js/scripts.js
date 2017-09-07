@@ -21,7 +21,16 @@ $(document).ready(function() {
 
 	//Ajustar cajas según tamaño de imagen
 	ajustarCajas();
+
+	//FluidBox
+
+	jQuery('.gallery a').each(function(){
+		jQuery(this).attr({'data-fluidbox' : ''});
+	});
 		
+	if(jQuery('[data-fluidbox]').length > 0) {
+		jQuery('[data-fluidbox]').fluidbox();
+	}
 });
 
 function ajustarCajas() {
