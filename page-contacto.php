@@ -21,11 +21,12 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 
 
 	<div class="principal contenedor contacto">
-		<main class="texto-centrado contenido-paginas">
+		<main class=" contenido-paginas">
 		<!--the_content(); imprime el contenido-->	
-			<h2>Realiza una reservación</h2>
 
 			<form class="reserva-contacto" method="post">
+
+				<h2>Escríbenos</h2>
 				<div class="campo">
 					<input type="text" name="nombre" placeholder="Nombre" required>
 				</div>

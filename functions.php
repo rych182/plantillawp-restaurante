@@ -1,4 +1,7 @@
 <?php
+//Enlazamos el archivo
+require get_template_directory() . '/inc/database.php';
+
 //funcion para agregar un boton de imagen destacada en la sección de páginas de Wordpress.
 //
 function lapizzeria_setup(){//Esta funcion tiene que hacer hook
