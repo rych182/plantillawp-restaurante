@@ -9,6 +9,11 @@ function lapizzeria_setup(){//Esta funcion tiene que hacer hook
 	add_image_size('nosotros',437,291,true);
 
 	add_image_size('especialidades',768,515,true);
+
+	//update_option sirve para ajustar el tamaño de las imagenes de la galeria por defecto, que ya venga siempre así en el momento de que activen nuestra plantilla
+	//Esta medida aparecera en el backoffice 
+	update_option('thumbnail_size_w',253);
+	update_option('thumbnail_size_h',164);
 }
 //Aquí esta el hook
 //after_setup_theme es una función que correra después que la plantilla ha sido instalada en nuestro Wordpress

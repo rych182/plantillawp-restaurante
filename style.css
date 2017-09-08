@@ -706,3 +706,20 @@ div.comentarios form input[type='submit']{
 p.logged-in-as a {
 	color: #a61206;
 }
+
+/*	GALERIA	*/
+
+div#gallery-1 .gallery-item {
+	width: 50%;
+	margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+	div#gallery-1 .gallery-item {
+		width: 25%;
+	}
+}
+
+div#gallery-1 .gallery-item .gallery-icon {
+	padding: 5px;
+}
