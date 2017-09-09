@@ -1,6 +1,8 @@
 <?php
-//Enlazamos el archivo
+//Enlazamos el archivo, tablas personalizadas y otras funciones
 require get_template_directory() . '/inc/database.php';
+//Funciones para las reservaciones
+require get_template_directory() . '/inc/reservaciones.php';
 
 //funcion para agregar un boton de imagen destacada en la sección de páginas de Wordpress.
 //

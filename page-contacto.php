@@ -48,6 +48,7 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 				</div>
 
 				<input type="submit" name="enviar" class="button">
+				<input type="hidden" name="oculto" value="1">
 			</form>
 		</main>
 	</div>
