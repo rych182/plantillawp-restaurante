@@ -3,6 +3,9 @@
 require get_template_directory() . '/inc/database.php';
 //Funciones para las reservaciones
 require get_template_directory() . '/inc/reservaciones.php';
+// Crear opciones para el template
+require get_template_directory() . '/inc/opciones.php';
+
 
 //funcion para agregar un boton de imagen destacada en la sección de páginas de Wordpress.
 //
