@@ -2,7 +2,7 @@
 
 	function lapizzeria_ajustes(){
 		
-		//1-titulo de la página,2- nombre del menu, 3-capability(lo que el usuario puede hacer), 4-slug en el menú, 5-lo que se va a mandar llamar
+		//1-titulo de la página,2- nombre del menu, 3-capability(lo que el usuario puede hacer), 4-slug en el menú, 5-lo que se va a mandar llamar,6-icono, 7-la posicion
 		add_menu_page('Gisea', 'Gisea Ajustes', 'administrator','lapizzeria_ajustes', 'lapizzeria_opciones','',20);
 		//1-Parent slug, 2-Nombre de la página, 3-titulo del menu, 4-Capability, 5-Slug, 6-Callback
 		//El slug es lo que se ve en la parte de arriba, en la URL
@@ -12,7 +12,30 @@
 add_action('admin_menu', 'lapizzeria_ajustes');
 
 function lapizzeria_opciones(){
+	?>
+
+	<div class="wrap">
+		<h1>Ajustes Gisea</h1>
+		<!--Cuando creas páginas de opciones siempre tiene que ser options.php , este archivo tiene todas las clases
+	 , todos los metodos, todas las opciones para leer estos archivos y guardar los datos que insertes en el formulario-->
+		<form action="options.php" method="post">
+			<table class="form-table">
+				<tr valign="top">
+					<th scrope="row">Dirección</th>
+					<td><input type="text" name="lapizzeria_direccion" value=""></td>
+				</tr>
+
+				<tr valign="top">
+					<th scrope="row">Teléfono</th>
+					<td><input type="text" name="lapizzeria_telefono" value=""></td>
+				</tr>
+			</table>
+			<!--Esto lo va a insertar en una base de datos-->
+			<?php submit_button();?>
+		</form>
+	</div>
 	
+<?php
 }
 
 function lapizzeria_reservaciones (){
@@ -56,3 +79,4 @@ function lapizzeria_reservaciones (){
 	</div>
 	<?php 
 }
+?>
