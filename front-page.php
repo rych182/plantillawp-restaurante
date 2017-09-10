@@ -14,7 +14,11 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 			<div class="texto-hero">
 				<!--the_title() se encarga de imprimir el titulo de la página-->
 				
-				<h1><?php the_title() ?>	</h1>				
+				<h1><?php echo esc_html( get_option('blogdescription')); ?></h1>	
+				<?php the_content();?>
+
+				<?php $url = get_page_by_title('Sobre nosotros'); ?>
+				<a class="button" href="<?php echo get_permalink($url->ID); ?>">Leer más</a>			
 			</div>
 		</div>
 	</div>
@@ -23,7 +27,7 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 	<div class="principal contenedor">
 		<main class="texto-centrado contenido-paginas">
 		<!--the_content(); imprime el contenido-->	
-			<?php the_content();?>
+			
 		</main>
 	</div>
 <?php endwhile; ?>
