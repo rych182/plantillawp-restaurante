@@ -18,7 +18,7 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 				<?php the_content();?>
 
 				<?php $url = get_page_by_title('Sobre nosotros'); ?>
-				<a class="button" href="<?php echo get_permalink($url->ID); ?>">Leer más</a>			
+				<a class="button naranja" href="<?php echo get_permalink($url->ID); ?>">Leer más</a>			
 			</div>
 		</div>
 	</div>
