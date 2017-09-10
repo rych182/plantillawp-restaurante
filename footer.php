@@ -9,8 +9,8 @@
 			?>
 
 			<div class="ubicacion">
-				<p>Jiutepec, Morelos</p>
-				<p>Tel:55 3647 8905</p>
+				<p><?php echo esc_html( get_option('lapizzeria_direccion') ); ?></p>
+				<p>Teléfono: <?php echo esc_html( get_option('lapizzeria_telefono') ); ?></p>
 			</div>
 			<!--Al usar "date" en php el año se cambia automaticamente-->
 			<p class="copyright">Todos los derechos reservados <?php echo date('Y'); ?></p>
