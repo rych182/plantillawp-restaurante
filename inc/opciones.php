@@ -7,9 +7,20 @@
 		//1-Parent slug, 2-Nombre de la página, 3-titulo del menu, 4-Capability, 5-Slug, 6-Callback
 		//El slug es lo que se ve en la parte de arriba, en la URL
 		add_submenu_page('lapizzeria_ajustes','Reservaciones', 'Reservaciones', 'administrator', 'lapizzeria_reservaciones', 'lapizzeria_reservaciones');
+	
+		//llamar al registro de las opciones de nuestro theme
+		//Esta madre hace hook con la funcion lapizzeria_registrar_opciones
+		add_action('admin_init', 'lapizzeria_registrar_opciones');
 	}
 
 add_action('admin_menu', 'lapizzeria_ajustes');
+
+function lapizzeria_registrar_opciones(){
+	//registrar opciones, una por campo
+	//1-grupo, 2-opcion(lo normal es el name de cada campo que tengas)
+	register_setting('lapizzeria_opciones_grupo', 'lapizzeria_direccion');
+	register_setting('lapizzeria_opciones_grupo', 'lapizzeria_telefono');
+}
 
 function lapizzeria_opciones(){
 	?>
@@ -19,6 +30,10 @@ function lapizzeria_opciones(){
 		<!--Cuando creas páginas de opciones siempre tiene que ser options.php , este archivo tiene todas las clases
 	 , todos los metodos, todas las opciones para leer estos archivos y guardar los datos que insertes en el formulario-->
 		<form action="options.php" method="post">
+			<!--Las funciones que yo registre, son estas que van a pasar a continuación-->
+			<?php settings_fields('lapizzeria_opciones_grupo');?>
+			<!--Utiliza los campos lapizzeria_opciones_grupo-->
+			<?php do_settings_sections('lapizzeria_opciones_grupo'); ?>
 			<table class="form-table">
 				<tr valign="top">
 					<th scrope="row">Dirección</th>
