@@ -22,13 +22,30 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 			</div>
 		</div>
 	</div>
-
+<?php endwhile; ?>
 
 	<div class="principal contenedor">
-		<main class="texto-centrado contenido-paginas">
+		<main class=" contenedor-grid ">
 		<!--the_content(); imprime el contenido-->	
-			
+			<h2 class="rojo">Nuestros servicios</h2>
+			<!--Cuando quiero imprimir algo de otras secciones donde no estoy-->
+			<?php $args = array(
+				'posts_per_page' => 3,//si pones -1 te imprimira todas las especialidades
+				'orderby' => 'rand',//rand es para forma random, si lo quitas te imprimira el mismo orden siempre
+				'post_type' => 'especialidades'
+				//Si solo quisieramos que apareciera una categoria ponemos 
+				//'category_name' => 'finanzas'
+			);
+			$especialidades = new WP_Query($args);
+			while ($especialidades->have_posts()): $especialidades->the_post();
+			 ?>
+
+			<div class="especilidad columnas1-3">
+				<?php the_title(); ?>
+			</div>
+
+			 <?php endwhile; wp_reset_postdata(); ?>
 		</main>
 	</div>
-<?php endwhile; ?>
+
 <?php get_footer(); ?>

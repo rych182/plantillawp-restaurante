@@ -85,6 +85,11 @@ div.comentarios form input[type='submit'] {
 .texto-rojo{
 	color: #a61206;
 }
+
+.rojo{
+	color: #a61206;	
+}
+
 .texto-centrado{
 	text-align: center;
 }
