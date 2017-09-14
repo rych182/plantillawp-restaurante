@@ -18,6 +18,8 @@ function lapizzeria_setup(){//Esta funcion tiene que hacer hook
 
 	add_image_size('especialidades',768,515,true);
 
+	add_image_size('especialidades_portrait',435,400,true);
+
 	//update_option sirve para ajustar el tamaño de las imagenes de la galeria por defecto, que ya venga siempre así en el momento de que activen nuestra plantilla
 	//Esta medida aparecera en el backoffice 
 	update_option('thumbnail_size_w',253);
