@@ -822,3 +822,63 @@ form.reserva-contacto input[type="submit"]{
 		margin: 0 auto; /*El margin es por si el texto se va hacia la izquierda y no se centra*/
 	}
 }
+
+div.contenido-especialidad {
+	position: relative;
+	overflow: hidden;
+	display: table;
+}
+
+div.informacion-platillo {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(1, 0, 224, 0.5); 
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: #ffffff;
+	padding: 5px;
+	transition: all .5s ease-in-out;
+	opacity: 0;/*El opacity es para que no aparezca hasta que pase el mouse por la imagen*/
+}
+
+div.informacion-platillo .precio{
+	font-weight: bold;
+}
+
+div.informacion-platillo h3 {
+	font-size: 30px;
+	margin-top: 10px;
+	font-weight: 700;
+}
+
+div.informacion-platillo p{
+	margin: 0 0 10px 0;
+}
+
+/*"max-width": hacia abajo y "min-width es hacia arriba*/
+@media only screen and (max-width: 767px){
+	div.contenido-especialidad {
+		overflow: visible;
+		display: block;
+		margin-bottom: 30px;
+	}
+	div.contenido-especialidad img {
+		width: 100%;
+	}
+	div.informacion-platillo {
+		position: relative;
+		opacity: 1;
+		background-color: rgba(1, 0, 224, 1);
+		padding: 30px;
+	}
+}
+
+div.contenido-especialidad:hover div.informacion-platillo{
+	top: 0;
+	opacity: 1;
+} 
+/*El rgba se utiliza mucho para poder usar transparencia en los colores*/

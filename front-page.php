@@ -27,7 +27,7 @@ la funcion 'hace_posts():' hace eso. se encarga de revisar cuando el loop a fina
 	<div class="principal contenedor">
 		<main class=" contenedor-grid ">
 		<!--the_content(); imprime el contenido-->	
-			<h2 class="rojo">Nuestros servicios</h2>
+			<h2 class="rojo texto-centrado">Nuestros servicios</h2>
 			<!--Cuando quiero imprimir algo de otras secciones donde no estoy-->
 			<?php $args = array(
 				'posts_per_page' => 3,//si pones -1 te imprimira todas las especialidades
